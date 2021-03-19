@@ -1,0 +1,23 @@
+create table User(Name varchar(60),
+		  Phone varchar(10),
+		  Email varchar(50),
+		  Username varchar(20),
+		  Password varchar(20),
+		  Status varchar(10));
+
+insert into User values('Harshil Panchal','9987447527','harshil0711@gmail.com','HP0711','pass@123','Admin');
+
+select * from User;
+
+ create table Items(Id int Primary Key auto_increment,
+    	Phonename varchar(30),
+    	Brand varchar(30),
+    	Price varchar(6),
+	Images LongBlob NOT NULL,
+	Status varchar(20))ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ create table Cartitems(Cartidno int Primary key auto_increment,
+    Id int,
+    Username varchar(40),
+    Quantity int,
+    Storage varchar(20));
